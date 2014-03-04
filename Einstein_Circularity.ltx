@@ -1,5 +1,10 @@
+% Put brackets around equations numbers; reset numbering in
+% appendix
 \documentclass{article}
 \usepackage{mathtools}
+\newtagform{brackets}{[}{]}
+\usetagform{brackets}
+\allowdisplaybreaks
 \title{Einstein's Proof in \S3 of ``On the Electrodynamics of Moving Bodies''}
 \author{Daniel Harrell}
 \begin{document}
@@ -136,7 +141,7 @@ seemingly sound. Einstein supposes that light is emitted in
 all directions from the origin of both systems. He further
 supposes, in accordance with P2, that every ray is
 moving at $c$ in the resting system, so forming
-a spherical wave. Thus, for every point
+a spherical wave. Thus, he infers, for every point
 $(x,y,z)$ reached by the wave at time $t$ in the resting
 system, the
 distance $ct$ from that point back to origin will satisfy
@@ -150,30 +155,68 @@ lopsided, since we will expect the ray moving directly with
 the moving system to have a velocity of $c-v$, the ray
 moving directly against this system a velocity of $c+v$, and
 every other ray its own velocity between $c-v$ and $c+v$ as
-determined by its direction. And in that case the wave
-would \emph{not} satisfy the Pythagorean theorem (give
-unnumbered version of theorem here) for every point
+determined by its direction. And in that case the wave would
+\emph{not} satisfy the Pythagorean theorem \begin{align}
+\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2.
+\tag{\S3.17}\label{eq:3.17}\end{align}for every point
 $(\xi,\eta,\zeta)$ reached at $\tau$ in the moving system,
-according to its own spatio-temporal coordinates (and for which
-Einstein uses the Greek letters given here). (Then show how
-expectation more supported give that Einstein's
-transformation equations are more complex than a simple
-transformation, with functional variables. Go through the
-solving for resting system coordinates and substitution.) Moreover, we
+according to its own spatio-temporal coordinates (and for
+which Einstein uses the Greek letters given here). This
+expectation is underlined, moreover, by the equations
+relating coordinates between the systems. For if these
+equations were simple, \begin{align} \tau=t \quad \xi=x \quad \eta=y
+\quad \zeta=z,\label{eq:simple} \end{align} then, contrary to
+our expectation, \ref{eq:3.17} would follow from
+\ref{eq:3.16} as a matter of simple substitution. But
+$\tau\neq t$, as Einstein concludes in \S2, on the simplest
+definition of what it means for time-measuring ``clocks'' 
+to be synchronous in either system, yet are thereby
+precluded, so Einstein shows, from being synchronous across
+systems. And this forces Einstein in \S3 to derive a more
+complex set of coordinate-relating equations than
+(\ref{eq:simple}), \begin{align}
+\tau&=\phi(v)\beta(t-vx/c^2) \tag{\S3.11}\label{eq:3.11}\\
+\xi&=\phi(v)\beta(x-vt) \tag{\S3.12}\\ \eta&=\phi(v)y
+\tag{\S3.13}\\ \zeta&=\phi(v)z \tag{\S3.14}\label{eq:3.14},
+\end{align} where $c$ is the velocity of light in the
+resting system, $v$ is the velocity of the moving system
+in relation to the resting system,
+$\beta=1/(\sqrt{1-v^2/c^2)}$, and $\phi(v)$ is a function
+that Einstein calls ``as yet unknown.'' That this unknown
+function is shared by all these equations
+is an index of how
+improbable it would seem for  
+\ref{eq:3.17} to follow from \ref{eq:3.16} by their
+application. For aren't there too many non-coordinate
+terms in the equations---and one unknown such term 
+at that---to allow for it?  
+
+The answer to this question, however, turns out to be
+``no,'' as Einstein indicates just after calling $\phi(v)$
+unknown. For if we do transform \ref{eq:3.16} using
+\ref{eq:3.11}--\ref{eq:3.14}, so Einstein remarks, we obtain
+\ref{eq:3.17} from ``a simple calculation.'' And indeed the
+derivation requires nothing more than algebra (albeit many
+steps of algebra---see \ref{sec:Derivation})
+
+right before embarking upon his proof. 
+
+--to preclude
+of far
+more complex such equations
+Einstein has derivedOf course, if
+the coordinates of both systems were related by equations as
+simple as these,Moreover, we
 can readily confirm this suspicion by using the
 transformation equations for coordinates that Einstein
 derives just before this point in \S3,
-\begin{align}
-	\tau=\phi(v)\beta(t-vx/c^2) \tag{\S3.11}
-	\end{align}
 But it turns out that the wave \emph{does} satisfy the
 theorem in the moving system. For when we actually transform
 \ref{eq:3.16} from the coordinates of the resting system to
 those of the moving system, [mention the equations here
 	along
 with the simple calculation] the result is this:
-\begin{align} \xi^2 + \eta^2 + \zeta^2 = c^2\tau^2.
-\tag{\S3.17}\label{eq:3.17}\end{align} Thus, for every point
+ Thus, for every point
 $(\xi,\eta,\zeta)$ reached by the wave at time $\tau$ in the
 moving system, the distance from that point back to origin
 is always $c\tau$. Or as Einstein characterizes the
@@ -301,5 +344,86 @@ travels at velocity c in kappa as measured in kappa, then it will not travel
 at c as measured in K. Or the other way around, if light travels at
 velocity c in kappa as measured in K, it will not travel at c in kappa
 as measured in K. 
+\appendix
+\section{Derivation}\label{sec:Derivation}
+Reverting back to equations \S3.11--14, we solve for the $K$
+coordinates as follows:
+\begin{align}
+ \tau&=\phi(v)\beta\left(t-\frac{vx}{c^2}\right)\\
+ \tau&=\phi(v)\beta t - \phi(v)\beta\frac{vx}{c^2}\\
+\phi(v)\beta\frac{vx}{c^2}+\tau&=\phi(v)\beta t\\
+\frac{vx}{c^2}+\frac{\tau}{\phi(v)\beta}&=t\label{eq:t}\\
+\xi&=\phi(v)\beta(x-vt)\\
+\xi&=\phi(v)\beta x -\phi(v)\beta vt\\
+\phi(v)\beta vt+\xi&=\phi(v)\beta x\\
+vt+\frac{\xi}{\phi(v)\beta}&=x\label{eq:x}\\
+\eta&=\phi(v)y\\
+\frac{\eta}{\phi(v)}&=y\label{eq:finaly}\\
+\zeta&=\phi(v)z\\
+\frac{\zeta}{\phi(v)}&=z\label{eq:finalz}
+\end{align}
+To eliminate the embedded $K$ coordinates that remain in
+equations (\ref{eq:t}) and (\ref{eq:x}), we can substitute
+(\ref{eq:x}) for $x$ in (\ref{eq:t}) and (\ref{eq:t}) for $t$
+in (\ref{eq:x}). Solving again for $t$:
+\begin{align}
+  \frac{v\left(vt+\frac{\xi}{\phi(v)\beta}\right)}{c^2}+\frac{\tau}{\phi(v)\beta}&=t\\
+  \frac{v^2t+\frac{v\xi}{\phi(v)\beta}}{c^2}+\frac{\tau}{\phi(v)\beta}&=t\\
+  \frac{v^2t}{c^2}+\frac{v\xi}{\phi(v)\beta c^2}+\frac{\tau}{\phi(v)\beta}&=t\\
+  \frac{v\xi}{\phi(v)\beta c^2}+\frac{\tau}{\phi(v)\beta}&=t-\frac{v^2t}{c^2}\\
+  \frac{v\xi}{\phi(v)\beta c^2}+\frac{\tau}{\phi(v)\beta}&=t\left(1-\frac{v^2}{c^2}\right)\\
+  \frac{1}{1-\frac{v^2}{c^2}}\left(\frac{v\xi}{\phi(v)\beta c^2}+\frac{\tau}{\phi(v)\beta}\right)&=t\\
+  \beta^2\left(\frac{v\xi}{\phi(v)\beta c^2}+\frac{\tau}{\phi(v)\beta}\right)&=t\\
+  \frac{\beta v\xi}{\phi(v)c^2}+\frac{\beta\tau}{\phi(v)}&=t\\
+  \intertext{or} \frac{\frac{\beta
+      v\xi}{c^2}+\beta\tau}{\phi(v)}&=t\\
+  \frac{\beta(\frac{v\xi}{c^2}+\tau)}{\phi(v)}&=t\label{eq:finalt}.
+\end{align}
+And solving again for $x$:
+\begin{align}
+v\left(\frac{vx}{c^2}+\frac{\tau}{\phi(v)\beta}\right)+\frac{\xi}{\phi(v)\beta}&=x\\
+\frac{v^2x}{c^2}+\frac{v\tau}{\phi(v)\beta}+\frac{\xi}{\phi(v)\beta}&=x\\
+\frac{v\tau}{\phi(v)\beta}+\frac{\xi}{\phi(v)\beta}&=x-\frac{v^2x}{c^2}\\
+\frac{v\tau}{\phi(v)\beta}+\frac{\xi}{\phi(v)\beta}&=x\left(1-\frac{v^2}{c^2}\right)\\
+\frac{1}{1-\frac{v^2}{c^2}}\left(\frac{v\tau}{\phi(v)\beta}+\frac{\xi}{\phi(v)\beta}\right)&=x\\
+\beta^2\left(\frac{v\tau}{\phi(v)\beta}+\frac{\xi}{\phi(v)\beta}\right)&=x\\
+\frac{\beta v\tau + \beta \xi}{\phi(v)}&=x\\
+\frac{\beta(v\tau + \xi)}{\phi(v)}&=x\label{eq:finalx}
+\end{align}
+Now we plug (\ref{eq:finalx}), (\ref{eq:finalt}),
+(\ref{eq:finalz}), and (\ref{eq:finaly}) back into \S 3.16:
+\begin{align}
+  \left(\frac{\beta(v\tau +
+      \xi)}{\phi(v)}\right)^2+\left(\frac{\eta}{\phi(v)}\right)^2+\left(\frac{\zeta}{\phi(v)}\right)^2&=c^2\left(\frac{\beta(\frac{v\xi}{c^2}+\tau)}{\phi(v)}\right)^2\\
+  \frac{\beta^2(v\tau +
+    \xi)^2}{\phi^2(v)}+\frac{\eta^2}{\phi^2(v)}+\frac{\zeta^2}{\phi^2(v)}&=c^2\left(\frac{\beta^2(\frac{v\xi}{c^2}+\tau)^2}{\phi^2(v)}\right)\\
+  \left(\frac{\phi^2(v)}{\beta^2(\frac{v\xi}{c^2}+\tau)^2}\right)\left(\frac{\beta^2(v\tau + \xi)^2+\eta^2+\zeta^2}{\phi^2(v)}\right)&=c^2\\
+  \left(\frac{\phi^2(v)}{\beta^2(\frac{v\xi}{c^2}+\tau)^2}\right)\left(\frac{\beta^2\left[(v\tau + \xi)^2+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}\right]}{\phi^2(v)}\right)&=c^2\\
+\frac{(v\tau +
+    \xi)^2+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}}{(\frac{v\xi}{c^2}+\tau)^2}&=c^2\\
+  (v\tau +
+  \xi)^2+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\left(\frac{v\xi}{c^2}+\tau\right)^2\\
+  (v\tau +
+  \xi)^2+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\left(\frac{v^2\xi^2}{c^4}+\frac{2\tau
+    v \xi}{c^2} + \tau^2 \right)\\
+  (v\tau +
+  \xi)^2+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=\frac{v^2\xi^2}{c^2}+2\tau
+    v \xi + c^2\tau^2\\
+v^2\tau^2 +
+  2\tau v \xi + \xi^2+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=\frac{v^2\xi^2}{c^2}+2\tau
+    v \xi + c^2\tau^2\\
+v^2\tau^2 +
+  2\tau v \xi +
+  \xi^2-\frac{v^2\xi^2}{c^2}-2\tau
+    v \xi + \frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\tau^2\\
+v^2\tau^2 +
+ \xi^2-\frac{v^2\xi^2}{c^2}+ \frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\tau^2\\ 
+\xi^2-\frac{v^2\xi^2}{c^2}+ \frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\tau^2-v^2\tau^2\\
+\xi^2\left(1-\frac{v^2}{c^2}\right)+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\tau^2-v^2\tau^2\\
+\xi^2\left(1-\frac{v^2}{c^2}\right)+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\tau^2\left(1-\frac{v^2}{c^2}\right)\\
+\xi^2\left(\frac{1}{\beta^2}\right)+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\tau^2\left(\frac{1}{\beta^2}\right)\\
+\frac{\xi^2}{\beta^2}+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=\frac{c^2\tau^2}{\beta^2}\\
+\xi^2+\eta^2+\zeta^2&=c^2\tau^2
+\end{align}
 \end{document}
 
