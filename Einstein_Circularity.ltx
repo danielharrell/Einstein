@@ -1,5 +1,17 @@
-% Put brackets around equations numbers; reset numbering in
-% appendix
+% appendix; bring up result of proof and put details of
+% transformation equations in a second section, along with
+% the problem. Perhaps frame that later section as a
+% discussion of two other ways of deriving 3.17 from 3.16
+% that Einstein would seem to want to avoid. One which he
+% does, and one which he doesn't. Also, begin this section
+% by speaking of how Einstein calls the derivation a simple
+% calculation, which in one sense is simple, but in another
+% sense involved, and underlines the sense in which such a
+% calculation is needed. Then frame the alternatives as ways
+% in which the calculation wouldn't be needed, either
+% because the transformation equations are simple; or
+% because the compatibility proof assumes the conditional
+% that Einstein is trying to proof.
 \documentclass{article}
 \usepackage{mathtools}
 \newtagform{brackets}{[}{]}
@@ -52,6 +64,7 @@ be to determine whether the claim is true; and if so, in
 what sense. Did Einstein indeed prove the postulates
 compatible, and if so, how? 
 \section{The Proof}
+{\samepage
 Einstein introduces his proof as follows:
 \begin{quote}
 	We now have to prove that any ray of light, measured
@@ -62,6 +75,7 @@ Einstein introduces his proof as follows:
 	constancy of the velocity of light is compatible
 	with the principle of relativity.
 \end{quote}
+}
 By introducing his proof this way, there seem to be at least
 three questions that Einstein takes his paper to have 
 already answered, along with a fourth we can raise at this
@@ -154,30 +168,61 @@ this wave to be spherical in the moving system, but
 lopsided, since we will expect the ray moving directly with
 the moving system to have a velocity of $c-v$, the ray
 moving directly against this system a velocity of $c+v$, and
-every other ray its own velocity between $c-v$ and $c+v$ as
-determined by its direction. And in that case the wave would
+every other ray its own velocity between $c-v$ and $c+v$,
+as determined by its direction. And in that case the wave would
 \emph{not} satisfy the Pythagorean theorem \begin{align}
-\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2.
+\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2
 \tag{\S3.17}\label{eq:3.17}\end{align}for every point
 $(\xi,\eta,\zeta)$ reached at $\tau$ in the moving system,
 according to its own spatio-temporal coordinates (and for
-which Einstein uses the Greek letters given here). This
+which Einstein uses the Greek letters given here). 
+But it turns out that the wave \emph{does} satisfy this
+theorem in the moving system. For when we actually transform
+\ref{eq:3.16}, so that it refers to the coordinates of the
+moving system rather than those of the resting system, the
+result is \ref{eq:3.17}.
+And this means that for every point
+$(\xi,\eta,\zeta)$ reached by the wave at time $\tau$ in the
+moving system, the distance from that point back to origin
+is always $c\tau$. Or as Einstein characterizes the
+seemingly successful result of the proof: \begin{quote} The
+wave under consideration is therefore no less a
+spherical wave with velocity of propagation $c$ when
+considered in the moving system. Consequently our
+two fundamental principles are compatible with each other.
+\end{quote} 
+\section{The Problem}
+Einstein says we obtain \ref{eq:3.17} from \ref{eq:3.16}
+``after a simple calculation.'' By ``simple,'' he seems to
+mean \emph{algebraic}, since the calculation in question
+involves many
+steps, but requires only algebraic manipulation to go from
+step to step.\footnote{The calculation is laid out in Section
+\ref{sec:Derivation}, p.~\pageref{sec:Derivation} of this
+essay.} But that there is \emph{any} calculation
+required is important. For there are at least two ways that
+\ref{eq:3.17} might have followed from \ref{eq:3.16} without
+calculation, underlining the sense in which the calculation
+serves as a proof despite its simplicity.  [revise from
+here]
+
+This
 expectation is underlined, moreover, by the equations
 relating coordinates between the systems. For if these
 equations were simple, \begin{align} \tau=t \quad \xi=x \quad \eta=y
 \quad \zeta=z,\label{eq:simple} \end{align} then, contrary to
-our expectation, \ref{eq:3.17} would follow from
-\ref{eq:3.16} as a matter of simple substitution. But
+our expectation, [\ref{eq:3.17}] would follow from
+[\ref{eq:3.16}] as a matter of simple substitution. But
 $\tau\neq t$, as Einstein concludes in \S2, on the simplest
 definition of what it means for time-measuring ``clocks'' 
 to be synchronous in either system, yet are thereby
 precluded, so Einstein shows, from being synchronous across
 systems. And this forces Einstein in \S3 to derive a more
 complex set of coordinate-relating equations than
-(\ref{eq:simple}), \begin{align}
+[\ref{eq:simple}], \begin{align}
 \tau&=\phi(v)\beta(t-vx/c^2) \tag{\S3.11}\label{eq:3.11}\\
-\xi&=\phi(v)\beta(x-vt) \tag{\S3.12}\\ \eta&=\phi(v)y
-\tag{\S3.13}\\ \zeta&=\phi(v)z \tag{\S3.14}\label{eq:3.14},
+	\xi&=\phi(v)\beta(x-vt) \tag{\S3.12}\label{eq:3.12}\\ \eta&=\phi(v)y
+	\tag{\S3.13}\label{eq:3.13}\\ \zeta&=\phi(v)z \tag{\S3.14}\label{eq:3.14},
 \end{align} where $c$ is the velocity of light in the
 resting system, $v$ is the velocity of the moving system
 in relation to the resting system,
@@ -195,9 +240,7 @@ The answer to this question, however, turns out to be
 ``no,'' as Einstein indicates just after calling $\phi(v)$
 unknown. For if we do transform \ref{eq:3.16} using
 \ref{eq:3.11}--\ref{eq:3.14}, so Einstein remarks, we obtain
-\ref{eq:3.17} from ``a simple calculation.'' And indeed the
-derivation requires nothing more than algebra (albeit many
-steps of algebra---see \ref{sec:Derivation})
+\ref{eq:3.17} from ``a simple calculation.''
 
 right before embarking upon his proof. 
 
@@ -210,22 +253,7 @@ simple as these,Moreover, we
 can readily confirm this suspicion by using the
 transformation equations for coordinates that Einstein
 derives just before this point in \S3,
-But it turns out that the wave \emph{does} satisfy the
-theorem in the moving system. For when we actually transform
-\ref{eq:3.16} from the coordinates of the resting system to
-those of the moving system, [mention the equations here
-	along
-with the simple calculation] the result is this:
- Thus, for every point
-$(\xi,\eta,\zeta)$ reached by the wave at time $\tau$ in the
-moving system, the distance from that point back to origin
-is always $c\tau$. Or as Einstein characterizes the
-seemingly successful result of the proof: \begin{quote} The
-	wave under consideration is therefore no less a
-	spherical wave with velocity of propagation $c$ when
-	considered in the moving system. Consequently our
-two fundamental principles are compatible with each other.
-\end{quote} \section{The Problem} from this one
+\section{The Problem} from this one
 Non-mathematically, The interpretation of this derivation is
 also simple, given Einstein's suppositions for .
 (\ref{eq:3.16}). means that light has traveled a distance
@@ -344,29 +372,39 @@ travels at velocity c in kappa as measured in kappa, then it will not travel
 at c as measured in K. Or the other way around, if light travels at
 velocity c in kappa as measured in K, it will not travel at c in kappa
 as measured in K. 
+
+\newpage
 \appendix
 \section{Derivation}\label{sec:Derivation}
-Reverting back to equations \S3.11--14, we solve for the $K$
+We begin with \ref{eq:3.16}: 
+\begin{align}  x^2+y^2+z^2=c^2 t^2.
+\tag{\ref{eq:3.16}} \end{align}
+Then reverting back to equations 
+\ref{eq:3.11}--\ref{eq:3.14},
+ we solve for the $K$
 coordinates as follows:
+\setcounter{equation}{0}
 \begin{align}
- \tau&=\phi(v)\beta\left(t-\frac{vx}{c^2}\right)\\
+	\tau&=\phi(v)\beta\left(t-\frac{vx}{c^2}\right)
+	\tag{\ref{eq:3.11}}\\
  \tau&=\phi(v)\beta t - \phi(v)\beta\frac{vx}{c^2}\\
 \phi(v)\beta\frac{vx}{c^2}+\tau&=\phi(v)\beta t\\
-\frac{vx}{c^2}+\frac{\tau}{\phi(v)\beta}&=t\label{eq:t}\\
-\xi&=\phi(v)\beta(x-vt)\\
+	\frac{vx}{c^2}+\frac{\tau}{\phi(v)\beta}&=t\label{eq:t}\\[1em]
+	\xi&=\phi(v)\beta(x-vt) \tag{\ref{eq:3.12}}\\
 \xi&=\phi(v)\beta x -\phi(v)\beta vt\\
 \phi(v)\beta vt+\xi&=\phi(v)\beta x\\
-vt+\frac{\xi}{\phi(v)\beta}&=x\label{eq:x}\\
-\eta&=\phi(v)y\\
-\frac{\eta}{\phi(v)}&=y\label{eq:finaly}\\
-\zeta&=\phi(v)z\\
+	vt+\frac{\xi}{\phi(v)\beta}&=x\label{eq:x}\\[1em]
+	\eta&=\phi(v)y \tag{\ref{eq:3.13}}\\
+	\frac{\eta}{\phi(v)}&=y\label{eq:finaly}\\[1em]
+	\zeta&=\phi(v)z \tag{\ref{eq:3.14}}\\
 \frac{\zeta}{\phi(v)}&=z\label{eq:finalz}
 \end{align}
 To eliminate the embedded $K$ coordinates that remain in
-equations (\ref{eq:t}) and (\ref{eq:x}), we can substitute
-(\ref{eq:x}) for $x$ in (\ref{eq:t}) and (\ref{eq:t}) for $t$
-in (\ref{eq:x}). Solving again for $t$:
+equations [\ref{eq:t}] and [\ref{eq:x}], we can substitute
+[\ref{eq:x}] for $x$ in [\ref{eq:t}], and [\ref{eq:t}] for $t$
+in [\ref{eq:x}]. Solving again for $t$:
 \begin{align}
+	\frac{vx}{c^2}+\frac{\tau}{\phi(v)\beta}&=t\tag{\ref{eq:t}}\\
   \frac{v\left(vt+\frac{\xi}{\phi(v)\beta}\right)}{c^2}+\frac{\tau}{\phi(v)\beta}&=t\\
   \frac{v^2t+\frac{v\xi}{\phi(v)\beta}}{c^2}+\frac{\tau}{\phi(v)\beta}&=t\\
   \frac{v^2t}{c^2}+\frac{v\xi}{\phi(v)\beta c^2}+\frac{\tau}{\phi(v)\beta}&=t\\
@@ -381,6 +419,7 @@ in (\ref{eq:x}). Solving again for $t$:
 \end{align}
 And solving again for $x$:
 \begin{align}
+	vt+\frac{\xi}{\phi(v)\beta}&=x\tag{\ref{eq:x}}\\
 v\left(\frac{vx}{c^2}+\frac{\tau}{\phi(v)\beta}\right)+\frac{\xi}{\phi(v)\beta}&=x\\
 \frac{v^2x}{c^2}+\frac{v\tau}{\phi(v)\beta}+\frac{\xi}{\phi(v)\beta}&=x\\
 \frac{v\tau}{\phi(v)\beta}+\frac{\xi}{\phi(v)\beta}&=x-\frac{v^2x}{c^2}\\
@@ -390,9 +429,12 @@ v\left(\frac{vx}{c^2}+\frac{\tau}{\phi(v)\beta}\right)+\frac{\xi}{\phi(v)\beta}&
 \frac{\beta v\tau + \beta \xi}{\phi(v)}&=x\\
 \frac{\beta(v\tau + \xi)}{\phi(v)}&=x\label{eq:finalx}
 \end{align}
-Now we plug (\ref{eq:finalx}), (\ref{eq:finalt}),
-(\ref{eq:finalz}), and (\ref{eq:finaly}) back into \S 3.16:
-\begin{align}
+
+Now we plug [\ref{eq:finalx}], [\ref{eq:finalt}],
+[\ref{eq:finalz}], and [\ref{eq:finaly}] back into
+\ref{eq:3.16}:
+\begin{align}  x^2+y^2+z^2&=c^2 t^2
+\tag{\ref{eq:3.16}}\\
   \left(\frac{\beta(v\tau +
       \xi)}{\phi(v)}\right)^2+\left(\frac{\eta}{\phi(v)}\right)^2+\left(\frac{\zeta}{\phi(v)}\right)^2&=c^2\left(\frac{\beta(\frac{v\xi}{c^2}+\tau)}{\phi(v)}\right)^2\\
   \frac{\beta^2(v\tau +
@@ -423,7 +465,7 @@ v^2\tau^2 +
 \xi^2\left(1-\frac{v^2}{c^2}\right)+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\tau^2\left(1-\frac{v^2}{c^2}\right)\\
 \xi^2\left(\frac{1}{\beta^2}\right)+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=c^2\tau^2\left(\frac{1}{\beta^2}\right)\\
 \frac{\xi^2}{\beta^2}+\frac{\eta^2}{\beta^2}+\frac{\zeta^2}{\beta^2}&=\frac{c^2\tau^2}{\beta^2}\\
-\xi^2+\eta^2+\zeta^2&=c^2\tau^2
+\xi^2+\eta^2+\zeta^2&=c^2\tau^2. \tag{\ref{eq:3.17}}
 \end{align}
 \end{document}
 
