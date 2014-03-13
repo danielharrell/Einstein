@@ -14,6 +14,7 @@
 % that Einstein is trying to proof.
 \documentclass{article}
 \usepackage{mathtools}
+\usepackage{amssymb}
 \newtagform{brackets}{[}{]}
 \usetagform{brackets}
 \allowdisplaybreaks
@@ -191,7 +192,7 @@ considered in $\kappa$. Consequently our
 two fundamental principles are compatible with each other.
 \end{quote} 
 
-\section{The Problem} 
+\section{The Calculation of the Proof} 
 
 Einstein says we obtain \ref{eq:3.17}
 from \ref{eq:3.16} ``after a simple calculation.'' By
@@ -268,12 +269,36 @@ complicates the x-coordinates).
 
 Another way that \ref{eq:3.17} might have followed from
 \ref{eq:3.16} without calculation is if we assumed
-\ref{eq:3.16} on the basis of P2, and further assumed
-that if \ref{eq:3.16} then \ref{eq:3.17}, on the basis of P1.
-\ref{eq:3.17} would then follow from \ref{eq:3.16} 
-logically rather than algebraically. (Revise from here.)
+\ref{eq:3.16} by P2, and further assumed by P1 that if
+\ref{eq:3.16} then \ref{eq:3.17}.  \ref{eq:3.17} would then
+follow from \ref{eq:3.16} as a simple matter of logic:
+\begin{align*} &(1) & x^2+y^2+z^2&=c^2 t^2 &\textrm{P2}\\
+	       &(2) & (x^2+y^2+z^2&=c^2 t^2) \rightarrow
+(\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2) &\textrm{P1}\\ &(3) &
+\therefore \quad \xi^2 + \eta^2 + \zeta^2 &= c^2\tau^2
+&\textrm{Modus Ponens} \end{align*} This way of deriving
+\ref{eq:3.17} from \ref{eq:3.16}, however, begs the question
+of whether P1, which is general, can indeed be applied to P2 to produce step
+(2) in the above proof.  Einstein's derivation, then,
+intends to prove rather than assume (2), in order to settle
+rather than beg the question of whether P1 can be applied to
+P2.  And it is in that sense that Einstein takes his
+derivation to prove their compatability.  To show the
+contrast with the derivation above, and using $L$ for
+physical laws as referred to $K$ and $\Lambda$ for those
+same laws as referred to $\kappa$, we might lay out
+Einstein's derivation like so:
+\begin{align*}
+	&(1) & x^2+y^2+z^2&=c^2 t^2 &\textrm{P2}\\
+	&(2) &&\hspace{27.5pt}  L \rightarrow \Lambda &\textrm{P1}&\\
+	&(3) & \therefore \quad (x^2+y^2+z^2&=c^2 t^2) \rightarrow 
+	(\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2)
+	&\textrm{P2}+\textrm{P1}
+\end{align*}
 
-\section{The Problem} from this one
+\section{The Problem}
+(Start revising from here.)
+from this one
 Non-mathematically, The interpretation of this derivation is
 also simple, given Einstein's suppositions for .
 (\ref{eq:3.16}). means that light has traveled a distance
