@@ -15,6 +15,8 @@
 \documentclass{article}
 \usepackage{mathtools}
 \usepackage{amssymb}
+\usepackage[bookmarks]{hyperref}
+\usepackage{enumerate}
 \newtagform{brackets}{[}{]}
 \usetagform{brackets}
 \allowdisplaybreaks
@@ -31,7 +33,7 @@ the phenomena is well known.''\footnote{All quotations are
 	I.~Miller in the Appendix of his book \emph{Albert
 	Einstein's Special Theory of Relativity}, as are the
 	numbers for all equations.} Thus begins Einstein's
-groundbreaking 1905 paper ``On the Electrodynamics of Moving
+1905 paper ``On the Electrodynamics of Moving
 Bodies,'' the first presentation of the special theory of
 relativity. After discussing an example of such 
 asymmetry, Einstein writes this: 
@@ -66,7 +68,7 @@ what sense. Did Einstein indeed prove the postulates
 compatible, and if so, how? 
 \section{The Proof}
 {\samepage
-Einstein introduces his proof as follows:
+Einstein introduces his proof in \S3 as follows:
 \begin{quote}
 	We now have to prove that any ray of light, measured
 	in the moving system, is propagated with the
@@ -101,60 +103,62 @@ readily given as early as the beginning of \S2 of the paper,
 given how Einstein formulates the definitions he offers
 there of the principles in question (hereafter labelled
 ``P1'' and ``P2''):
-\begin{quotation}
-	1. The laws by which the states of physical systems
+\begin{quote}
+\begin{enumerate}[P1.]
+	\item The laws by which the states of physical systems
 	undergo changes are independent of whether those
 	changes of state are referred to one or the other of
 	two coordinate systems moving relatively to each
-	other in uniform translational motion.
-	
-	2. Any ray of light moves in the ``resting''
+	other in uniform translational
+	motion.\label{P1}
+	\item Any ray of light moves in the ``resting''
 	coordinate system with the definite velocity $c$,
 	which is independent of whether the ray was emitted
-	by a resting or by a moving body. %Note later the
+	by a resting or by a moving body.\label{P2}%Note later the
 	% last part of this definition about the time
 	%interval
-\end{quotation} 
-
+\end{enumerate} 
+\end{quote}
 The resting system, then, is the coordinate
 system in which any ray of light moves at $c$, independently
-of any motion in the source of the ray, according to P2. The
+of any motion in the source of the ray, according to
+P\ref{P1}. The
 moving system, in turn, is any coordinate system in uniform
 translational motion relative to the resting system; and
-where, according to P1, either system can serve as reference
+where, according to P\ref{P1}, either system can serve as reference
 for any law of physics---in particular, the law stated in
-P2. 
+P\ref{P2}. 
 
 But then it would seem as if the principles were
 incompatible. For suppose that the source of a ray of light
 were moving at velocity $v$ in the direction of the ray.
 This source would therefore move at $v$ in the resting
-system (hereafter $K$) yet be at rest in a moving system
+system (hereafter $K$), yet be at rest in a moving system
 (hereafter $\kappa$): the system moving at $v$ in the
 direction of the ray, relative to $K$. In both $K$ and
-$\kappa$, according to P1, we should infer that this ray is
+$\kappa$, according to P\ref{P1}, we should infer that this ray is
 moving at $c$. But to infer it moves at $c$ in $\kappa$
-would seem to violate P2. For it would then move at $c$
+would seem to violate P\ref{P2}. For it would then move at $c$
 relative to its moving source, as if dependent on it.  And
-according to P2, but now in violation of P1, it seems we
+according to P\ref{P2}, but now in violation of P\ref{P1}, it seems we
 should say that the ray of light is moving at $c$ in $K$ but
 $c-v$ in $\kappa$. Similarly, if the ray were moving
 directly against the motion of its source, it seems we
 should say that the ray is moving again at $c$ in $K$, but
 now at $c+v$ in $\kappa$.  Proving the principles
 compatible, then, would seem to mean showing that such
-inferences from P2 are wrong.  It would mean showing that if
+inferences from P\ref{P2} are wrong.  It would mean showing that if
 the ray in question---and more generally, if \emph{any}
 ray---is moving at $c$ in $K$ (according to
-P2), it will indeed be moving at $c$ in $\kappa$
-(in accordance with P1).  
+P\ref{P2}), it will indeed be moving at $c$ in $\kappa$
+(in accordance with P\ref{P1}).  
 
 And this is exactly what Einstein says we now have to prove
 when he introduces his proof in \S3, quoted above.  On this
 same level of description, moreover, the proof is
 simple---and seemingly sound. Einstein supposes that light
 is emitted in all directions from the origin of both $K$ and
-$\kappa$. He further supposes, in accordance with P2, that
+$\kappa$. He further supposes, in accordance with P\ref{P2}, that
 every ray is moving at $c$ in $K$, so forming
 a spherical wave. Thus, he infers, for every point $(x,y,z)$
 reached by the wave at time $t$ in $K$, the
@@ -163,7 +167,7 @@ the Pythagorean theorem in three dimensions: \begin{align}
 	x^2+y^2+z^2=c^2 t^2.  \tag{\S3.16}\label{eq:3.16}
 \end{align}
 
-Now, if P2 were incompatible with P1, we should not expect
+Now, if P\ref{P2} were incompatible with P\ref{P1}, we should not expect
 this wave to be spherical in $\kappa$, but
 lopsided, since we will expect the ray moving directly with
 $\kappa$ to have a velocity of $c-v$, the ray
@@ -196,7 +200,7 @@ two fundamental principles are compatible with each other.
 
 Einstein says we obtain \ref{eq:3.17}
 from \ref{eq:3.16} ``after a simple calculation.'' By
-``simple,'' he seems to mean \emph{algebraic}; for while the
+``simple,'' he seems to mean algebraic; for while the
 calculation in question involves many steps, each step leads
 to the next by algebraic manipulation alone.\footnote{The
 calculation is laid out in Section
@@ -211,7 +215,7 @@ calculation.
 One way is if the equations relating coordinates between $K$
 and $\kappa$ were as simple as this: \begin{align} \tau=t
 	\quad \xi=x \quad \eta=y \quad
-	\zeta=z.\label{eq:simple} \end{align} For in that
+	\zeta=z\label{eq:simple} \end{align} For in that
 case, \ref{eq:3.17} would follow from \ref{eq:3.16} as a
 matter of simple substitution. But we know that $\xi\neq x$,
 since the velocity $v$ of $\kappa$ displaces its
@@ -226,17 +230,18 @@ t$.  For as Einstein shows in \S2 of his paper, the simplest
 definition of what it means for time-measuring ``clocks'' to
 be synchronous in one system will preclude their being
 synchronous in both systems at once. Moreover, this
-preclusion follows from P2. For on this definition, any two
+preclusion follows from P\ref{P2}. For on this definition, any two
 clocks $A$ and $B$ are synchronous if a ray of light is sent
 from $A$ at $t_A$ to $B$ at $t_B$ and back to $A$ at $t'_A$,
 and these times satisfy the equation: \begin{align}
 	t_B-t_A=t'_A-t_B. \tag{\S1.1}\label{eq:1.1}
 \end{align} But if $A$ and $B$ satisfy this equation while
 at rest in $K$, they will no longer satisfy it when put in
-motion with $\kappa$, by the same reasoning that makes P2
-seem incompatible with P1. For then the ray of light sent
+motion with $\kappa$, by the same reasoning that makes
+P\ref{P2}
+seem incompatible with P\ref{P1}. For then the ray of light sent
 between $A$ and $B$, in moving independently of their motion
-by P2, will move in effect at $c-v$ from $A$ to $B$ and at
+by P\ref{P2}, will move in effect at $c-v$ from $A$ to $B$ and at
 $c+v$ from $B$ back to $A$, with a corresponding difference
 in the times to and back. Or as Einstein formulates it,
 using $r_{AB}$ for the distance $AB$: \begin{align}
@@ -245,7 +250,7 @@ using $r_{AB}$ for the distance $AB$: \begin{align}
 it is clear that $t_B-t_A\neq t'_A-t_B$; or, for any clocks
 $\alpha$ and $\beta$ that do satisfy \ref{eq:1.1} in
 $\kappa$ (while $A$ and $B$ satisfy it in $K$), that
-$\tau\neq t$.  And since $\tau\neq t$ and $\xi\neq x$,
+$\tau\neq t$.  So, since $\tau\neq t$ and $\xi\neq x$,
 Einstein is forced in \S3 to derive a more complex set of
 coordinate-relating equations than [\ref{eq:simple}]:
 \begin{align} \tau&=\phi(v)\beta(t-vx/c^2)
@@ -272,39 +277,30 @@ less probable.
 
 Another way that \ref{eq:3.17} might have followed from
 \ref{eq:3.16} without calculation is if we assumed
-\ref{eq:3.16} by P2, and further assumed by P1 that if
-\ref{eq:3.16} then \ref{eq:3.17}.  \ref{eq:3.17} would then
-follow from \ref{eq:3.16} as a simple matter of logic:
-\begin{align*} &(1) & x^2+y^2+z^2&=c^2 t^2 &\textrm{P2}\\
-	       &(2) & (x^2+y^2+z^2&=c^2 t^2) \rightarrow
-(\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2) &\textrm{P1}\\ &(3) &
+\ref{eq:3.16} by P\ref{P2}, and further assumed by P\ref{P1}
+that if \ref{eq:3.16} then \ref{eq:3.17}.  \ref{eq:3.17}
+would then follow from \ref{eq:3.16} as a simple matter of
+logic: \begin{align*} &1. & x^2+y^2+z^2&=c^2 t^2
+&\textrm{P2}\\ &2. & (x^2+y^2+z^2&=c^2 t^2) \rightarrow
+(\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2) &\textrm{P1}\\ &3. &
 \therefore \quad \xi^2 + \eta^2 + \zeta^2 &= c^2\tau^2
-&\textrm{Modus Ponens} \end{align*} This way of deriving
-\ref{eq:3.17} from \ref{eq:3.16}, however, begs the question
-of whether P1, which is general, can indeed be applied to P2 to produce step
-(2) in the above proof.  Einstein's derivation, then,
-intends to prove rather than assume (2), in order to settle
-rather than beg the question of whether P1 can be applied to
-P2.  And it is in that sense that Einstein takes his
-derivation to prove their compatability.  To show the
-contrast with the derivation above, and using $L$ for
-physical laws as referred to $K$ and $\Lambda$ for those
-same laws as referred to $\kappa$, we might lay out
-Einstein's derivation like so:
-\begin{align*}
-	&(1) & x^2+y^2+z^2&=c^2 t^2 &\textrm{P2}\\
-	&(2) &&\hspace{27.5pt}  L \rightarrow \Lambda &\textrm{P1}&\\
-	&(3) & \therefore \quad (x^2+y^2+z^2&=c^2 t^2) \rightarrow 
-	(\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2)
-	&\textrm{P2}+\textrm{P1}
-\end{align*}
+&\textrm{1, 2\ Modus Ponens} \end{align*} This way of
+deriving \ref{eq:3.17} from \ref{eq:3.16} (hereafter called
+``logical''), however, begs the question of whether
+P\ref{P1}, which is general, can indeed be applied to
+P\ref{P2} to produce step (2) in the above proof.
+Einstein's derivation, then, intends to prove rather than
+assume (2), in order to settle rather than beg the question
+of whether P\ref{P1} can be applied to P\ref{P2}.  And it is
+in that sense that Einstein takes his derivation (hereafter
+called ``material'') to prove their compatibility.
 
-\section{The Problem} The difference between these last two
-derivations of \ref{eq:3.17} from \ref{eq:3.16}, however,
-raises a question about Einstein's derivation of
-\ref{eq:3.11}--\ref{eq:3.14}.  For he derives these latter
-equations by first producing the following equations that he
-assumes to hold in $\kappa$: \begin{align}
+\section{The Problem} The difference between the material
+and logical derivations of \ref{eq:3.17} from \ref{eq:3.16},
+however, raises a question about Einstein's earlier
+derivation of \ref{eq:3.11}--\ref{eq:3.14}.  For he derives
+these latter equations by starting with the following
+equations that he assumes to hold in $\kappa$: \begin{align}
 	\tfrac{1}{2}(\tau_0+\tau_2)=\tau_1 \label{eq:tau}\\
 \xi=c\tau \label{eq:xi}\\ \eta=c\tau \label{eq:eta}\\
 \zeta=c\tau \label{eq:zeta} \end{align} The assumption
@@ -316,28 +312,87 @@ axes move at velocity $c$. But if this means that
 \ref{eq:3.11}--\ref{eq:3.14} also assume so much about the
 speed of light in $\kappa$, and it is by their application
 alone that \ref{eq:3.17} is derived from \ref{eq:3.16}, then
-it starts to look as if this derivation, despite requiring
-calculation, is no different in substance from the
-question-begging approach to the derivation indicated above,
-where the compatibility of P1 and P2 is assumed rather than
-proved. Indeed, if \ref{eq:3.11}--\ref{eq:3.14} do assume
-that light moves at $c$ in $\kappa$, then the only way it
-seems Einstein has avoided assuming what he claims to prove,
-is if the assumption that light moves at $c$ in $\kappa$ is
-not from P1's being applied to P2, but rather being made
-independently. The logic of the derivation of $\ref{eq:3.17}$ from
-$\ref{eq:3.16}$, using ``A'' to indicate the independent
-assumption, might then be depicted as follows: 
-\begin{align*} (1)&&  x^2+y^2+z^2&=c^2 t^2 &\textrm{P2}\\
-(2)&&  \xi^2 + \eta^2 + \zeta^2 &= c^2\tau^2
-&\textrm{A}\\ 
-(3)&& 
-	       \therefore \quad x^2+y^2+z^2&=c^2
-	       t^2\rightarrow \xi^2 + \eta^2 + \zeta^2 = c^2\tau^2
-       &\textrm{P1} \end{align*}
-From this point show that Einstein says this is false, and
-it makes the proof look circular. Then move on the solutions
-supposing circularity.
+it starts to look as if the material derivation, despite
+requiring calculation, is no different in substance from the
+logical derivation, where the application of
+P\ref{P2} to P\ref{P1}, and thus their compatibility, is assumed rather
+than proved. Moreover, Einstein includes a parenthetical
+gloss on the source of [\ref{eq:xi}]--[\ref{eq:zeta}] that
+suggests they come from the application of P\ref{P1} to
+P\ref{P2}: ``\ldots [W]e can easily determine the quantities
+$\xi$, $\eta$, $\zeta$ by expressing in equations that light
+(as required by the principle of the constancy of the
+velocity of light, in combination with the principle of
+relativity) is also propagated with velocity $c$ when
+measured in the moving system.'' 
+
+His gloss, then, raises the question of
+circularity in his supposed proof anew. For how has Einstein
+indeed proved rather than merely assumed the compatibility
+of P\ref{P2} and P\ref{P1}, if the derivation of \ref{eq:3.17} from
+\ref{eq:3.16} that supposedly proves it depends on
+transformation equations whose own derivation requires the
+compatibility of P\ref{P2} and P\ref{P1} as an assumption from the start?
+Understanding whether Einstein
+indeed proved the compatibility of P\ref{P1} and P\ref{P2}, then, depends
+on resolving this issue of circularity---the issue, that is,
+of whether
+\begin{align*}
+	(x^2+y^2+z^2&=c^2 t^2) \rightarrow
+(\xi^2 + \eta^2 + \zeta^2 = c^2\tau^2) 
+\end{align*}
+is indeed being proved by Einstein in his 
+derivation of \ref{eq:3.17} from \ref{eq:3.16}, or rather
+in some way being assumed.
+
+\section{Solutions to the Problem} Unfortunately, Einstein
+himself says nothing about this issue in the paper---a
+surprising silence given how obvious the issue is. But this
+suggests that Einstein's own understanding of his derivation
+as a proof raises no such issue about circularity. So what
+could this understanding be? I will now go through several
+possible answers that all strike me as unlikely, essentially
+because none of them resolves the issue of circularity in
+such a way as to explain Einstein's silence about the
+matter. But then, in the last part of this essay, I will 
+propose a final answer that I think does resolve the issue
+in this way, making the other resolutions even less likely.  
+
+\subsection{An assumption of conjunction rather
+compatibility} There are I will now go through what seem to
+me And in that case Einstein has seemingly begged the very
+question his proof was intended to settle. But how, in that
+case, has Einstein not begged the question Indeed, if
+\ref{eq:3.11}--\ref{eq:3.14} do assume that light moves at
+$c$ in $\kappa$, then the only way it seems Einstein has
+avoided assuming what he claims to prove, is if the
+assumption that light moves at $c$ in $\kappa$ is not from
+P\ref{P1}'s being applied to P\ref{P2}, but rather being made
+independently. We could then interpret Einstein's
+derivation, along with the calculation need to make it, as
+showing the compatibility of P\ref{P1} and P\ref{P2} by combining, in
+effect, the separate assumptions about the speed of light in
+$K$ and $\kappa$ respectively. But it is hard to know what
+could make the assumption that light moves at $c$ in
+$\kappa$ truly independent from the assumption that light
+moves at $c$ in $K$ rather than at best a silent extension
+of it, since the latter assumption is also required for the
+derivation. And in any case Einstein himself is not silent,
+explaining the source of [\ref{eq:xi}]--[\ref{eq:zeta}]
+before introducing them as if the assumption behind them
+were indeed the application of P\ref{P1} to P\ref{P2}: ``\ldots~we can
+easily determine the quantities $\xi$, $\eta$, $\zeta$ by
+expressing in equations that light (as required by the
+principle of the constancy of the velocity of light, in
+combination with the principle of relativity) is also
+propagated with velocity $c$ when measured in the moving
+system.'' His gloss, then, raises the question of
+circularity in his supposed proof anew. For how has Einstein
+indeed proved rather than merely assumed the compatibility
+of P\ref{P2} and P\ref{P1}, if the derivation of \ref{eq:3.17} from
+\ref{eq:3.16} that supposedly proves it depends on
+transformation equations whose own derivation requires the
+compatibility of P\ref{P2} and P\ref{P1} as an assumption from the start?
 
 that Einstein is indeed
 assuming that these rays move at $c$ in $\kappa$ in deriving
