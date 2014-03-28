@@ -12,7 +12,8 @@
 % because the transformation equations are simple; or
 % because the compatibility proof assumes the conditional
 % that Einstein is trying to proof.
-\documentclass{article}
+\documentclass[article]{memoir}
+\setsecnumdepth{chapter}
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage[bookmarks]{hyperref}
@@ -24,7 +25,6 @@
 \author{Daniel Harrell}
 \begin{document}
 \maketitle
-
 \textsc{``That Maxwell's electrodynamics}---the way in which
 it is usually understood---when applied to moving bodies,
 leads to asymmetries which do not appear to be inherent in
@@ -66,7 +66,7 @@ paper. Or so he claims---and my purpose in this essay will
 be to determine whether the claim is true; and if so, in
 what sense. Did Einstein indeed prove the postulates
 compatible, and if so, how? 
-\section{The Proof}
+\section{The proof of compatibility}
 {\samepage
 Einstein introduces his proof in \S3 as follows:
 \begin{quote}
@@ -196,7 +196,7 @@ considered in $\kappa$. Consequently our
 two fundamental principles are compatible with each other.
 \end{quote} 
 
-\section{The Calculation of the Proof} 
+\section{The calculation of the proof} 
 
 Einstein says we obtain \ref{eq:3.17}
 from \ref{eq:3.16} ``after a simple calculation.'' By
@@ -295,7 +295,7 @@ of whether P\ref{P1} can be applied to P\ref{P2}.  And it is
 in that sense that Einstein takes his derivation (hereafter
 called ``material'') to prove their compatibility.
 
-\section{The Problem} The difference between the material
+\section{The problem of circularity} The difference between the material
 and logical derivations of \ref{eq:3.17} from \ref{eq:3.16},
 however, raises a question about Einstein's earlier
 derivation of \ref{eq:3.11}--\ref{eq:3.14}.  For he derives
@@ -326,37 +326,84 @@ velocity of light, \emph{in combination with} the principle of
 relativity) is also propagated with velocity $c$ when
 measured in the moving system'' [emphasis added]. 
 
-His gloss, then, raises the question of circularity in his
-supposed proof anew. For how has Einstein indeed proved
-rather than merely assumed the compatibility of P\ref{P1}
-and P\ref{P2}, if the derivation of \ref{eq:3.17} from
-\ref{eq:3.16} that supposedly proves it depends on transformation
-equations whose own derivation requires the compatibility of
-P\ref{P1} and P\ref{P2} as an assumption from the start?
-Understanding Einstein's proof, then,
-depends on resolving this issue of apparent circularity.  
+But if P\ref{P1} is indeed being applied to P\ref{P2} in
+[\ref{eq:xi}]--[\ref{eq:zeta}] to
+derive \ref{eq:3.11}--\ref{eq:3.14}, and these equations in
+turn are being applied to \ref{eq:3.16} to derive
+\ref{eq:3.17}, then it looks as if the compatibility of
+P\ref{P1} and P\ref{P2} is being assumed in the supposed
+proof of it, making it no real proof at all. And Einstein's
+gloss above makes the issue of circularity
+unavoidable. 
 
-\section{Solutions to the Problem} Unfortunately, Einstein
+\section{Solutions to the problem} Unfortunately, Einstein
 himself says nothing about this issue in the paper---a
 surprising silence given how obvious the issue is. But this
 suggests that Einstein's own understanding of his proof
 raises no such issue about circularity. So what could this
 understanding be? I will now go through several possible
-answers that all strike me as unlikely, because none of them
+answers that all strike me, finally, as unlikely; for none of them
 resolves the issue of circularity, finally, in such a way as
-to explain Einstein's silence about the matter. But then, in
-the last part of this essay, I will propose a final answer
-that I think does resolve the issue in this way, making the
+to explain Einstein's silence about the matter. But this
+will lead me to a final answer that I think
+does resolve the issue in this way, making the
 other resolutions even less likely.  
 
-\subsection{An assumption of conjunction rather
-compatibility} One way we might resolve the issue of circularity
-most simply is to suppose that Einstein is \emph{not} in fact applying
-P\ref{P1} to P\ref{P2} when he assumes that light
-moves at $c$ in $\kappa$. Because this is simply an
-assumption, we can take it to be made independently of the speed of
-light in $K$.  (Revise from here. Make sure to cast in form
-of conditional statement above.)
+\subsection{An assumption of conjunction rather than
+compatibility} Perhaps the simplest way to try to resolve
+the issue of circularity in Einstein's favor, is to suppose
+that he is \emph{not}, strictly speaking, applying P\ref{P1}
+to P\ref{P2} in assuming that light moves at $c$ in
+$\kappa$.  Since this is simply an assumption, we can take
+it to be made independently of any assumption about the
+speed of light in $K$.  And perhaps this would mean having
+taken P\ref{P1} and P\ref{P2} separately too, where one is
+not yet being applied to the other. In that case, the
+application would happen only when the separate assumptions
+about light's speed in $K$ and $\kappa$ were being combined,
+which is in the derivation of \ref{eq:3.17} from
+\ref{eq:3.16}. And the success of this derivation would thus
+show the compatibility of P\ref{P1} and P\ref{P2}, in a
+proof that escaped circularity. 
+
+But how can we separate the assumption that light moves at
+$c$ in $\kappa$ from the assumption that it moves at $c$ in
+$K$ without divorcing the first assumption from any relation
+to P\ref{P1}? We are assuming, after all, that light moves
+at $c$ in $K$ because of P\ref{P2}; so to assume that light
+moves at $c$ in $\kappa$ \emph{independently} of its speed
+in $K$ means assuming it independently of P\ref{P2}. But
+then in what sense can this independent assumption represent P\ref{P1},
+which asserts nothing, as such, about the speed of light in
+$\kappa$, but only something about its speed in $\kappa$
+given its speed in $K$? Or more generally put, P\ref{P1}
+asserts nothing about the speed of light in $\kappa$ (or in
+any other coordinate system) independently of P\ref{P2}; it
+is only by a dependence on P\ref{P2} that P\ref{P1} has any
+``content,'' so we might say, regarding the speed of light. 
+And this would seem the meaning of Einstein's gloss. (Revise
+from here.)
+
+. . in relation to its speed $K$, is not
+about the speed of light in $\kappa$, but rather about any
+law of physics in both $\kappa$ and $K$ , again as
+formulated by Einstein, about any law of physics in two such
+systems, one in uniform translational motion with respect to
+the other. again is a general postulate about every law of
+physics across all inertial frames of reference? 
+
+then there would seem to be no
+way to make the latter assumption represent P\ref{P2},
+which again is a general principle about all laws of
+physics in relation to any inertial reference system.  
+assuming To assume that light moves at $c$
+in $\kappa$ independently of its speed in $K$ is to make the
+assumption, in effect, without
+
+
+
+(Revise from here. Make sure to cast in form of conditional
+statement above.)
 
 There are I will now go through what seem to
 me And in that case Einstein has seemingly begged the very
@@ -393,15 +440,21 @@ of P\ref{P2} and P\ref{P1}, if the derivation of \ref{eq:3.17} from
 transformation equations whose own derivation requires the
 compatibility of P\ref{P2} and P\ref{P1} as an assumption from the start?
 
-\subsection{An assumption of particularity rather than
-universality}
-\subsection{A virtuous rather than vicious circle}
-\subsection{An illuminating circle rather than obscuring
-circle}
-\section{A Final Solution}
+\subsection{An assumption of particularity rather than universality} 
+\subsection{A circle that is virtuous rather than vicious}
+\subsection{A circle that is illuminating rather than obscuring}
+\section{A final answer}
 In this section, start by pointing out that the equations
 that express the assumption are not in a form as to allow
 the derivation.
+\section{Significance of Proof}
+Here, as a way of concluding the essay, point out how later
+presentations of relativity theory often present the
+postulates as compatible. Use Bridgman in particular. But
+then go on to treat of rest of section 3, and how the
+resting system and moving system are being used by Einstein
+with care, as part of a larger argument. Is this more than
+just of historical interest?
 
 that Einstein is indeed
 assuming that these rays move at $c$ in $\kappa$ in deriving
